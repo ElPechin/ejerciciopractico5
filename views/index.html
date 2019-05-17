@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Enlazamos el Css -->
+  <link rel="stylesheet" href="./stylesheets/style.css">
+  <link rel="stylesheet" href="./stylesheets/comportamiento.css">
+
+  <!-- Titulo de la paginas -->
+  <title>Meli Trendig Topics</title>
+
+</head>
+
+<body>
+<!-- AGREGAMOS UN ONSUBMIT QUE RETORNE LA VARIABLE-->
+<form action="resultados" class="formulario">
+  <!-- TITULO DE LA PAGINA -->
+  <h1 class="formulario__titulo">Trending Topics</h1>
+
+  <!-- Contiene a todos los inputs -->
+  <div class="contenedor__inputs">
+
+    <!-- A CADA INPUT SE LE AGREGA UN ID PARA SELECCIONARLO CON JAVASCRIPT -->
+    <select id="selsite" name="site" onchange="setCategory(value)">
+      <option selected disabled value></option>
+      <option type="text" value="MLA" name="site">Argentina</option>
+      <option type="text" value="MLB" name="site">Brasil</option>
+      <option type="text" value="MCU" name="site">Cuba</option>
+      <option type="text" value="MPY" name="site">Paraguay</option>
+      <option type="text" value="MBO" name="site">Bolivia</option>
+      <option type="text" value="MLV" name="site">Venezuela</option>
+      <option type="text" value="MPA" name="site">Panamá</option>
+      <option type="text" value="MHN" name="site">Honduras</option>
+      <option type="text" value="MCR" name="site">Costa Rica</option>
+      <option type="text" value="MCO" name="site">Colombia</option>
+      <option type="text" value="MLC" name="site">Chile</option>
+      <option type="text" value="MEC" name="site">Ecuador</option>
+      <option type="text" value="MLU" name="site">Uruguay</option>
+      <option type="text" value="MNI" name="site">Nicaragua</option>
+      <option type="text" value="MLM" name="site">Mexico</option>
+      <option type="text" value="MGT" name="site">Guatemala</option>
+      <option type="text" value="MRD" name="site">Dominicana</option>
+      <option type="text" value="MPE" name="site">Perú</option>
+  </select>
+
+    <select name="category" id="selcategory">
+      <option value="">Opcional</option>
+    </select>
+    <table>
+      <tr>
+        <th>Filas</th>
+        <th>Columnas</th>
+        </tr>
+      <tr>
+        <td>
+          <select name="filas" id="selfilas">
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+          </select>
+        </td>
+        <td>
+          <select name="columnas" id="selcolumnas">
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+          </select>
+        </td>
+      </tr>
+    </table>
+    <!-- El parrafo que se mostrara si sucede un error -->
+    <p class="input-text" id="parrafo" ></p>
+
+    <!-- Boton Submit cuando se haga click haga una acción-->
+    <input type="submit" value="Consultar" onclick="validar()">
+  </div>
+</form>
+<!-- Enlazamos el JavaScript -->
+<script type="text/javascript" src="./javascripts/cargarcategorias.js"></script>
+</body>
+</html>
+

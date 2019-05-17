@@ -1,0 +1,74 @@
+
+{
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: sans-serif;
+    background: #ffffff;
+}
+
+/* Titulo "Crear cuenta"*/
+
+h1 {
+    color: whitesmoke;
+    text-align: center;
+}
+
+/* Ordenamos  todo el formulario */
+
+.formulario {
+    width: 98%;
+    max-width: 1000px;
+    margin: auto;
+    background: white;
+    border_radius: 7px;
+}
+
+/* Todo lo que conforma el titulo */
+
+.formulario__titulo {
+    background: #2d3277;
+    padding: 20px;
+    text-align: center;
+    font-weight: 100;
+    font-size: 30px;
+    border-radius: 7px;
+}
+
+/* CONTENEDOR QUE CONTIENE LOS INPUTS*/
+
+.contenedor__inputs {
+    padding: 10px 30px;
+    /*¨display para acomodar los inputs*/
+    display: flex;
+    /*El contenido que no entra se va hacia abajo*/
+    flex-wrap: wrap;
+    /*SEPARAMOS LOS INPUTS*/
+    justify-content: space-between;
+
+}
+
+/* ordenamos todos los inputs */
+
+select {
+    margin-bottom: 15px;
+    padding: 15px;
+    font-size: 16px;
+    border-radius: 3px;
+    margin-left: 20px;
+    background: #ffe600;
+}
+
+/* El boton de registrar */
+
+input  {
+    font-size: large;
+    size: 20px;
+    border-radius: 3px;
+    alignment: bottom;
+    border-color: #2d3277;
+}
+
+
